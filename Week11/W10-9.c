@@ -64,7 +64,40 @@ void Sqrt()                                    // 제곱근
     printf("%lf의 제곱근은 %lf 입니다.\n", a, result);
 }
 
-//오류나서 정확한 계산이 실행되지 않음.
+
+int main(void)
+{
+    while (1) {                                   // while문을 사용해서 한번 계산하더라도
+        switch (menu()) {                         // 계산기처럼 다음 계산을 진행할 수 있도록 무한반복하게 만듬.
+            case 1:                               // 그래서 선택지에 전원버튼처럼 종료를 추가함.
+                   factorial();
+                   break;
+            case 2:
+                   sine();
+                   break;
+            case 3:
+                   logBase10();
+                   break;
+            case 4:
+                   Sqrt();
+                   break;
+            case 5:
+                   per();
+                   break;
+            case 6:
+                   Combi();
+                   break;
+            case 7:
+                   printf("종료합니다.\n");
+                   return 0;
+            default:
+                   printf("잘못된 선택입니다.\n");
+                   break;
+        }
+    }
+}
+
+// 잘못 만들어서 주석처리...
 /*
 void per()                                    // 순열 nPr
 {
@@ -99,34 +132,3 @@ void Combi()                              // 조합 nCr
     printf("%lld C %lld는 %lld 입니다.\n", n, r, combi);
 }
 */
-int main(void)
-{
-    while (1) {                                   // while문을 사용해서 한번 계산하더라도
-        switch (menu()) {                         // 계산기처럼 다음 계산을 진행할 수 있도록 무한반복하게 만듬.
-            case 1:                               // 그래서 선택지에 전원버튼처럼 종료를 추가함.
-                   factorial();
-                   break;
-            case 2:
-                   sine();
-                   break;
-            case 3:
-                   logBase10();
-                   break;
-            case 4:
-                   Sqrt();
-                   break;
-            case 5:
-                   per();
-                   break;
-            case 6:
-                   Combi();
-                   break;
-            case 7:
-                   printf("종료합니다.\n");
-                   return 0;
-            default:
-                   printf("잘못된 선택입니다.\n");
-                   break;
-        }
-    }
-}
