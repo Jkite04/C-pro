@@ -9,7 +9,7 @@ double rad(double degree)
     return PI * degree / 180.0;            // 도 단위를 라디안으로 바꾼다
 }
 
-void drawbar(int height)
+void drawbar(int height)                              // void() <-- 리턴값이 없는 함수
 {
     for (int i = 0;  i < height; i++)            // for문을 이용해서 그래프를 그리기 위해
     {                                            // *를 출력한다.
