@@ -18,8 +18,10 @@ int menu (void)                            // main 함수 실행시 menu가 실�
     return n;
 }
 
-void factorial()                              // switch문 속 계산 프로그램들
-{
+//switch문 속 계산 프로그램들
+
+void factorial()                              //  void() <-- 리턴이 없는 함수 
+{                                             
     long long n, result=1, i;                  // 팩토리얼    n!
     printf("정수를 입력하시오:");               // long long , %lld   <-- int 보다 큰 정수를 나타내는 자료형
     scanf("%lld", &n);
